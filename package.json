@@ -1,0 +1,18 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "rm -rf node_modules/ && lerna clean -y",
+    "serve:main": "lerna exec --scope main-pro -- npm run serve",
+    "serve:sub": "lerna exec --scope sub-pro -- npm run serve",
+    "build": "lerna run --stream --sort build"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
